@@ -1,0 +1,288 @@
+$color-primary: hsl(209, 43%, 30%);
+$color-accent: hsl(35, 48%, 45%);
+$color-success: hsl(94, 48%, 56%);
+$color-warning: hsl(46, 100%, 61%);
+$color-error: hsl(355, 90%, 61%);
+
+:root {
+  /* MAIN COLORS */
+
+    --color-primary: #{$color-primary};
+    --color-primary-light: #{lighten($color-primary, 15)};
+    --color-primary-dark: #{darken($color-primary, 15)};
+    --color-primary-bg: #{transparentize($color-primary, 0.2)};
+
+    --color-accent: #{$color-accent};
+    --color-accent-light: #{lighten($color-accent, 15)};
+    --color-accent-dark: #{darken($color-accent, 10)};
+    --color-accent-bg: #{transparentize($color-accent, 0.2)};
+
+  /* GRAYSCALE */
+    --black: hsl(240, 6%, 12%);
+    --lt-black: hsla(0, 0, 0%, 0.2);
+    --gray-10: hsl(240, 3%, 19%);
+    --gray-6: hsl(260, 1%, 48%);
+    --gray-4: hsl(240, 1%, 65%);
+    --gray-3: hsl(0, 0%, 73%);
+    --gray-2: hsl(270, 2%, 82%);
+    --gray-1: hsl(300, 2%, 91%);
+    --dk-white: hsl(0,0,95%);
+    --white: white;
+
+  /* STATUS COLORS */
+
+  --color-success: #{darken($color-success, 40)};
+  --color-success-border: #{darken($color-success, 20)};
+  --color-success-bg: #{transparentize($color-success, 0.5)};
+
+  --color-error: #{darken($color-error, 40)};
+  --color-error-border: #{darken($color-error, 20)};
+  --color-error-bg: #{transparentize($color-error, 0.5)};
+
+  --color-warning: #{darken($color-warning, 40)};
+  --color-warning-border: #{darken($color-warning, 20)};
+  --color-warning-bg: #{transparentize($color-warning, 0.5)};
+
+
+  /* TYPOGRAPHY COLORS */
+
+    --color-text: var(--gray-10);
+    --color-text-heading: var(--black);
+    --color-text-subtle: var(--gray-6);
+    --color-link: #{$color-primary};
+    --color-link-hover: var(--color-primary-light);
+    --color-link-visited: var(--color-primary-dark);
+    --color-mark: var(--color-accent-bg);
+    --color-blockquote-border: var(--gray-2);
+
+  /* BOXES */
+    --color-component: var(--dk-white);
+
+  /* BORDERS */
+    --color-border: var(--gray-2);
+
+  /* BOX SHADOW */
+    --color-box-shadow: var(--lt-black);
+
+  /* BODY COLORS */
+
+    --color-background: var(--gray-1);
+
+  /* FORMS */
+
+    --form-element-border: var(--color-border);
+    --form-element-border-focus: var(--color-primary);
+    --form-element-border-error: var(--color-error);
+    --form-element-bg: var(--white);
+    --form-element-bg-hover: var(--dk-white);
+    --form-text-placeholder: var(--gray-4);
+    --form-text-label: var(--gray-6);
+
+  /* BUTTONS */
+
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-bg-light: var(--color-primary-light);
+  --btn-primary-hover: var(--color-primary-light);
+  --btn-primary-active: var(--color-primary-dark);
+  --btn-primary-label: var(--white);
+
+  --btn-secondary-bg: var(--gray-1);
+  --btn-secondary-active: var(--gray-2);
+  --btn-secondary-label: var(--gray-10);
+
+  --btn-accent-bg: var(--color-accent);
+  --btn-accent-bg-light: var(--color-accent-light);
+  --btn-accent-hover: var(--color-accent-light);
+  --btn-accent-active: var(--color-accent-dark);
+  --btn-accent-label: var(--white);
+
+  --btn-disabled-bg: var(--gray-2);
+  --btn-disabled-label: var(--gray-10);
+
+  /* ICONS */
+
+    --color-icon-primary: var(--gray-4);
+    --color-icon-secondary: inherit;
+}
+
+a {
+  color: var(--color-link);
+
+  &:visited {
+    color: var(--color-link-visited);
+  }
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+.text-subtle {
+  color: var(--color-text-subtle);
+}
+
+/* GRAY SCALE TEXT */
+
+  .text-light {
+    color: var(--white);
+  }
+
+  .text-gray-1 {
+    color: var(--gray-1);
+  }
+
+  .text-gray-2 {
+    color: var(--gray-2);
+  }
+
+  .text-gray-3 {
+    color: var(--gray-3);
+  }
+
+  .text-gray-4 {
+    color: var(--gray-4);
+  }
+
+  .text-gray-6 {
+    color: var(--gray-6);
+  }
+
+  .text-gray-10 {
+    color: var(--gray-10);
+  }
+
+  .text-dark {
+    color: var(--black);
+  }
+
+/* GRAY SCALE BG */
+
+  .bg-light {
+    background-color: var(--white);
+  }
+
+  .bg-gray-1 {
+    background-color: var(--gray-1);
+  }
+
+  .bg-gray-2 {
+    background-color: var(--gray-2);
+  }
+
+  .bg-gray-3 {
+    background-color: var(--gray-3);
+  }
+
+  .bg-gray-4 {
+    background-color: var(--gray-4);
+  }
+
+  .bg-gray-6 {
+    background-color: var(--gray-6);
+  }
+
+  .bg-gray-10 {
+    background-color: var(--gray-10);
+  }
+
+  .bg-dark {
+    background-color: var(--black);
+  }
+
+/* PRIMARY TEXT COLORS */
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-primary-light {
+    color: var(--color-primary-light);
+  }
+
+  .text-primary-dark {
+    color: var(--color-primary-dark);
+  }
+
+  .text-primary-bg {
+    color: var(--color-primary-bg);
+  }
+
+/* PRIMARY BACKGROUND COLORS */
+
+  .bg-primary {
+    background-color: var(--color-primary-bg);
+  }
+
+  .bg-primary-text {
+    background-color: var(--color-primary);
+  }
+
+  .bg-primary-light {
+    background-color: var(--color-primary-light);
+  }
+
+  .bg-primary-dark {
+    background-color: var(--color-primary-dark);
+  }
+
+/* ACCENT TEXT COLORS */
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .text-accent-light {
+    color: var(--color-accent-light);
+  }
+
+  .text-accent-dark {
+    color: var(--color-accent-dark);
+  }
+
+  .text-accent-bg {
+    color: var(--color-accent-bg);
+  }
+
+/* ACCENT BACKGROUND COLORS */
+
+  .bg-accent {
+    background-color: var(--color-accent-bg);
+  }
+
+  .bg-accent-light {
+    background-color: var(--color-accent-light);
+  }
+
+  .bg-accent-dark {
+    background-color: var(--color-accent-dark);
+  }
+
+  .bg-accent-text {
+    background-color: var(--color-accent);
+  }
+
+/* STATUS COLORS */
+
+  .text-success {
+    color: var(--color-success);
+  }
+
+  .bg-success {
+    background-color: var(--color-success);
+  }
+
+  .text-warning {
+    color: var(--color-warning);
+  }
+
+  .bg-warning {
+    background-color: var(--color-warning);
+  }
+
+  .text-error {
+    color: var(--color-error);
+  }
+
+  .bg-error {
+    background-color: var(--color-error);
+  }

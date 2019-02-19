@@ -1,0 +1,23 @@
+.board > div {
+  &:first-child {
+    flex-basis: 70%;
+  }
+
+  &:nth-child(2), &:nth-child(3) {
+    align-self: center;
+  }
+}
+
+.board {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+
+  &:hover {
+    background-color: var(--gray-1);
+    border-radius: 5px;
+
+    a {
+      color: var(--color-link-hover);
+    }
+  }
+}

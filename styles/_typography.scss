@@ -1,0 +1,85 @@
+:root {
+  --font-primary: 'Raleway', sans-serif;
+
+  --base-text-size: 1em;
+  --base-text-scale: 1.333;
+
+  --font-size-xs: calc(var(--base-text-size) / (var(--base-text-scale) * var(--base-text-scale)));
+  --font-size-sm: calc(var(--base-text-size) / var(--base-text-scale));
+  --font-size-md: var(--base-text-size);
+  --font-size-lg: calc(var(--font-size-md) * var(--base-text-scale));
+  --font-size-xl: calc(var(--font-size-lg) * var(--base-text-scale));
+  --font-size-xxl: calc(var(--font-size-xl) * var(--base-text-scale));
+  --font-size-xxxl: calc(var(--font-size-xxl) * var(--base-text-scale));
+
+  --heading-line-height: 1.2;
+  --body-line-height: 1.4;
+}
+
+body {
+  font-size: var(--base-text-size);
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, form legend {
+  line-height: var(--heading-line-height);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-xxs);
+}
+
+label {
+  font-size: var(--font-size-sm);
+  display: block;
+  color: var(--form-text-label);
+  margin-bottom: var(--space-xxxs);
+}
+
+.text-xxxl {
+  font-size: var(--font-size-xxxl);
+}
+
+h1, .text-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+h2, .text-xl {
+  font-size: var(--font-size-xl);
+}
+
+h3, .text-lg {
+  font-size: var(--font-size-lg);
+}
+
+h4, .text-md {
+  font-size: var(--font-size-md);
+}
+
+small, .text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+
+p {
+  line-height: var(--body-line-height);
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.header-underlined {
+  border-bottom: 1px solid var(--color-border);
+}

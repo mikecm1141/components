@@ -1,0 +1,34 @@
+:root {
+  --input-font-size: 1em;
+  --input-radius: 0.25em;
+}
+
+input[type=checkbox] {
+  margin-left: 0;
+}
+
+.form-control {
+  font-size: var(--input-font-size);
+  border-radius: var(--input-radius);
+  border: 1px solid var(--form-element-border);
+  box-sizing: border-box;
+  background-color: var(--form-element-bg);
+  padding: var(--space-sm);
+  box-shadow: inset 0 2px 4px 0 hsla(0, 0%, 0%, 0.08);
+
+  &:hover {
+    background-color: var(--form-element-bg-hover);
+  }
+
+  &:focus {
+    border-color: var(--form-element-border-focus);
+  }
+
+  &::placeholder {
+    color: var(--form-text-placeholder);
+  }
+}
+
+.input-full-width {
+  width: 100%;
+}
